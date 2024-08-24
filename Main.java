@@ -1,7 +1,13 @@
 // ALWAY HAVE START LIKE THIS.
 // AND BE THE NAME OF THE CLASS EQUAL TO THE NAME OF FILE
 
-public class Main {
+public class Main { // <- class, so you can make objects.
+  String data;
+
+  public Main() { // constructer
+    data = "100120 =1201201i149038584389jifnivndfisxv923190880df8v0admb uww74vcx478b 456v15ds484v1vr98f4vs9x1c6v";
+  }
+
   public static void main(String[] args) {
 
     // Declares like C++
@@ -85,20 +91,41 @@ public class Main {
       {3, 4, 5},
       {6, 7, 8},
     };
+    
+    Main mainObj = new Main();
 
     System.out.println(map[2][2]);
-    method("hi");
-    method("DEATH!11");
-    method("JUDGEMENT");
-    method("PUNISHMENT!");
+    mainObj.method("hi");
+    mainObj.method("DEATH!11");
+    mainObj.method("JUDGEMENT");
+    mainObj.method("PUNISHMENT!");
 
-    System.out.println(addNums(0.5f, 0.13f));
+    System.out.println(mainObj.addNums(0.5f, 0.13f));
+    System.out.println(mainObj.addNums(1, 13));
+
+    Main goog1 = new Main(); // called the constructer
+    Main goog2 = new Main();
+    System.out.println(goog1 + ": " + goog2.data);
+    System.out.println(goog2 + ": " + goog1.data);
   }
-  static void method(String quote) {
+  public void method(String quote) {
     System.out.println("WOW, the method \"method\" just got executed!!1!");
     System.out.println("Quote: " + quote);
   }
-  static float addNums(float num1, float num2) {
+
+  public float addNums(float num1, float num2) {
+    System.out.println("FLOAT ALWAYS");
     return num1 + num2;
+  } // 2 different
+  public int addNums(int num1, int num2) {
+    System.out.println("INT ALWAYS");
+    return num1 + num2;
+  }
+
+  public void changeData(String[] strings){
+    this.data = "";
+    for (String word : strings) {
+      this.data += word + " ";
+    }
   }
 }
